@@ -46,8 +46,8 @@ def predict(request: TextRequest, user=Depends(verify_token)):
     return item
 
 @app.get("/results")
-def get_results(user=Depends(verify_token)):
-    require_admin(user)
+def get_results():
+    #require_admin(user)
     respose = table.scan()
 
     items = respose.get("Items", [])
