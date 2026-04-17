@@ -64,4 +64,4 @@ def get_results(user=Depends(verify_token)):
 @app.get("/admin")
 def admin(user=Depends(verify_token)):
     require_admin(user)
-    return {"message": "Welcome, admin!, docker is working fine!!!"}
+    return {"message": "Welcome, admin!, docker is working fine!!"}
